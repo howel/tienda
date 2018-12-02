@@ -13,10 +13,18 @@
 
 Route::get('/', 'TestController@welcome');
 
-Route::get('/prueba', function () {
+/*Route::get('/prueba', function () {
     return 'Hola soy la ruta prueba';
-});
+});*/
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/admin/products','ProductController@index');
+Route::get('/admin/products/create','ProductController@create');
+Route::post('/admin/products','ProductController@store');
+
+//CR
+//UD
